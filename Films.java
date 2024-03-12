@@ -1,44 +1,48 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Films {
     private String title;
     private String year;
     private String director;
-    private String actors;
+    private ArrayList<String> actors;
 
+    actors = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
-    public void setTitle(String filmTitle) {
+    public void setTitle() {
         System.out.println("Set a title of film: ");
         title = scanner.nextLine();
-        title = filmTitle;
     }
     public String getTitle() {
         return title;
     }
-    public void setYear(String filmYear) {
+    public void setYear() {
         System.out.println("Set a year of film: ");
         year = scanner.nextLine();
-        year = filmYear;
     }
     public String getYear() {
         return year;
     }
-    public void setDirector(String filmDirector) {
+    public void setDirector() {
         System.out.println("Set a director of the film: ");
         director = scanner.nextLine();
-        director = filmDirector;
     }
     public String getDirector() {
         return director;
     }
-    public void setActors(String filmActors) {
-        String loop = " ";
-        while (loop == "y" || loop == "Y") {
-            System.out.println("Set a ac");
-            actors = filmActors;
-
-        }
+    public void setActors() {
+        String loop;
+        do {
+            System.out.println("Set a actor to this film: ");
+            String actors = scanner.nextLine();
+            actors.add(actor);
+            System.out.println(("Do you want add more actors? (Y/N)"));
+            loop = scanner.nextLine();
+        } while (loop.equalsIgnoreCase("Y"));
+    }
+    public ArrayList<String> getActors() {
+        return actors;
     }
 }
 
