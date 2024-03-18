@@ -1,11 +1,11 @@
-// import java.util.ArrayList;
+package src;    
 import java.util.Scanner;
 
 public class Films {
     private String title;
     private String year;
     private String director;
-    // private ArrayList<String> actors;
+    
 
     public Films(String title, String year, String director) {
         this.title = title;
