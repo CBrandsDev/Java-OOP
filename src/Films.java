@@ -5,14 +5,13 @@ public class Films {
 
     Scanner scanner = new Scanner(System.in);
     private String title;
-    private String year;
+    private int year;
     private String director;
     
     
-    public Films(String title, String year, String director) {
+    public Films(String title, int year) {
         this.title = title;
         this.year = year;
-        this.director = director;
     }
     
     public static String rTitle() {
